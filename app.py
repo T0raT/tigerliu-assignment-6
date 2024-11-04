@@ -17,7 +17,7 @@ def generate_plots(N, mu, sigma2, S):
     # Hint: Use numpy's random's functions to generate values for X and Y
     X = np.random.random(N)
     X_2d = X.reshape(-1, 1)
-    Y = X + np.random.normal(mu, sigma2, N)
+    Y = X + np.random.normal(mu, np.sqrt(sigma2), N)
 
     # TODO 2: Fit a linear regression model to X and Y
     # Hint: Use Scikit Learn
@@ -60,7 +60,7 @@ def generate_plots(N, mu, sigma2, S):
         X_sim_2d = X_sim.reshape(-1 , 1)
 
         # TODO: Generate Y values with normal additive error (mean mu, variance sigma^2)
-        Y_sim = X_sim + np.random.normal(mu, sigma2, N) 
+        Y_sim = X_sim + np.random.normal(mu, np.sqrt(sigma2), N) 
 
         # TODO: Fit a linear regression model to X_sim and Y_sim
         sim_model = LinearRegression().fit(X_sim_2d, Y_sim)  
