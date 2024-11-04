@@ -67,7 +67,7 @@ def generate_plots(N, mu, sigma2, S):
 
         # TODO: Append the slope and intercept of the model to slopes and intercepts lists
         slopes.append(sim_model.coef_[0])  # Replace None with code to append slope
-        intercepts.append(model.intercept_)  # Replace None with code to append intercept
+        intercepts.append(sim_model.intercept_)  # Replace None with code to append intercept
 
     # Plot histograms of slopes and intercepts
     plt.figure(figsize=(10, 5))
